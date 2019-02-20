@@ -49,7 +49,7 @@ table {
 }
 //Variables 
 @Tundora: #424242;
-@Amour: #F7DFF4;
+@Remy: #FEECFD;
 @font-stack: Arial, "sans-serif";
 @Cornfield: #F6F9C2;
 //mixins 
@@ -63,6 +63,7 @@ table {
 
 .htwo() {
 	font-family: @font-stack;
+	font-size: 2.5rem;
 	color: @Tundora;
 	padding: 2%;
 	text-decoration: none;
@@ -89,19 +90,20 @@ body {
 .container {
 	max-width: 100rem;
 	margin: 0 auto;
-	background: @Amour;
+	background: @Remy;
 }
 
 header {
 	display: flex; 
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 2%;
-	border-bottom: 2px solid gray;
-	padding-bottom: 1rem;
+
 	h1 {
 		font-family: @font-stack;
 		color: black;
+		font-size: 4rem;
+		margin-bottom: 1rem;
+		margin-top: 1rem;
 		nav {
 			padding: 2%;
 			.navFoot(); 
@@ -121,11 +123,16 @@ article {
 	width: 50%;
 	padding: 2%;
 	margin: 0 auto;
+	margin-top: 1rem;
+	border: 3px lightgray dashed;
+
 	h2 {
 		align-self: flex-start;
+		font-size: 2rem;
 	}
 	p {
-		.htwo()
+		font-family: @font-stack;
+		font-size: 1.6rem;
 		}
 		button {
 			width: 30%;
@@ -133,6 +140,46 @@ article {
 			align-self: flex-end;
 			font-family: @font-stack;
 			background: @Cornfield;
-			font-size: 1.3rem;
 	}
+}
+
+section {
+	display: flex;
+	justify-content: space-between;
+	margin: 5%;
+	padding: 5%;
+	border: 5px lightgray solid;
+	background:#FFFAFF;
+	h2 {
+		.htwo()
+	}
+	li {
+		font-size: 2rem;
+		line-height: 1rem;
+		margin-top: 1rem;
+		
+	}
+}
+
+p {
+	font-family: @font-stack;
+	line-height: 2rem;
+	padding: 1%;
+}
+
+footer {
+	.navFoot();
+	color: black;
+	padding: 2%;
+	margin: 0;
+	font-family: @font-stack;
+	font-size: 1.6rem;
+
+}
+
+.bork {
+	width: 50%;
+	border: 3px solid white;
+	
+
 }
