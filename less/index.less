@@ -51,6 +51,7 @@ table {
 @Tundora: #424242;
 @Amour: #F7DFF4;
 @font-stack: Arial, "sans-serif";
+@Cornfield: #F6F9C2;
 //mixins 
 .navFoot() {
 	width: 100%;
@@ -111,5 +112,27 @@ header {
 header a {
 	text-decoration: none;
 	font-family: @font-stack;
-	
+}
+
+article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	padding: 2%;
+	margin: 0 auto;
+	h2 {
+		align-self: flex-start;
+	}
+	p {
+		.htwo()
+		}
+		button {
+			width: 30%;
+			margin: 3%;
+			align-self: flex-end;
+			font-family: @font-stack;
+			background: @Cornfield;
+			font-size: 1.3rem;
+	}
 }

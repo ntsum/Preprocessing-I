@@ -170,3 +170,29 @@ header a {
   text-decoration: none;
   font-family: Arial, "sans-serif";
 }
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 2%;
+  margin: 0 auto;
+}
+article h2 {
+  align-self: flex-start;
+}
+article p {
+  font-family: Arial, "sans-serif";
+  color: #424242;
+  padding: 2%;
+  text-decoration: none;
+  display: flex;
+}
+article button {
+  width: 30%;
+  margin: 3%;
+  align-self: flex-end;
+  font-family: Arial, "sans-serif";
+  background: #F6F9C2;
+  font-size: 1.3rem;
+}
