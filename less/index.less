@@ -47,6 +47,29 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+//Variables 
+@Tundora: #424242;
+@Remy: #FEECFD;
+@font-stack: Arial, "sans-serif";
+@Cornfield: #F6F9C2;
+//mixins 
+.navFoot() {
+	width: 100%;
+	font-size: 1rem;
+	font-family: @font-stack;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.htwo() {
+	font-family: @font-stack;
+	font-size: 2.5rem;
+	color: @Tundora;
+	padding: 2%;
+	text-decoration: none;
+	display: flex;
+}
+
 
 /* Set every element's box-sizing to border-box */
 * {
@@ -54,6 +77,142 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.6rem;
+	background: ivory;
 }
 
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	background: @Remy;
+}
+
+header {
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+
+	h1 {
+		font-family: @font-stack;
+		color: black;
+		font-size: 4rem;
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+		nav {
+			padding: 2%;
+			.navFoot(); 
+		}
+	}
+}
+
+header a {
+	text-decoration: none;
+	font-family: @font-stack;
+}
+
+article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	padding: 2%;
+	margin: 0 auto;
+	margin-top: 1rem;
+	border: 3px lightgray dashed;
+
+	h2 {
+		align-self: flex-start;
+		font-size: 2rem;
+	}
+	p {
+		font-family: @font-stack;
+		font-size: 1.6rem;
+		}
+		button {
+			width: 30%;
+			margin: 3%;
+			align-self: flex-end;
+			font-family: @font-stack;
+			background: @Cornfield;
+	}
+}
+
+section {
+	display: flex;
+	justify-content: space-between;
+	margin: 5%;
+	padding: 5%;
+	border: 5px lightgray solid;
+	background:#FFFAFF;
+	h2 {
+		.htwo()
+	}
+	li {
+		font-size: 2rem;
+		line-height: 1rem;
+		margin-top: 1rem;
+		
+	}
+}
+
+p {
+	font-family: @font-stack;
+	line-height: 2rem;
+	padding: 1%;
+}
+
+footer {
+	.navFoot();
+	color: black;
+	padding: 2%;
+	margin: 0;
+	font-family: @font-stack;
+	font-size: 1.6rem;
+
+}
+
+.bork {
+	width: 50%;
+	border: 3px solid white;
+	
+
+}
+
+@media (max-width: 500px) {
+
+.container {
+	width: 80%;
+}
+
+section {
+	flex-direction: column;
+	width: 90%;		
+	padding: 2% 8%;
+	}
+h2 {
+	.htwo;
+	 }
+li {	
+	line-height: 1.6rem;
+}
+p {
+	line-height: 1.6rem;
+}
+footer {
+	display: flex;
+	align-items: center;
+	padding: 5%;
+h2{
+	text-decoration: none;
+	padding: 2%;
+}
+p{
+	padding: 2%;
+	}
+}
